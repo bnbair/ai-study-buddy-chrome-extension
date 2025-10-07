@@ -1,0 +1,63 @@
+Here’s how you can test your AI Study Buddy Chrome Extension locally using the Origin Trial tokens and Chrome’s built-in AI APIs:
+
+✅ 1. Prerequisites
+
+Chrome version 131 to 138 (required for the APIs to work)
+
+Check your version at chrome://version
+
+
+Origin Trial tokens for:
+
+localhost:443 (for local testing)
+aistudybuddy.dev (for production)
+
+
+Enable Developer Mode in Chrome Extensions
+
+
+🧪 2. Load the Extension
+
+
+Unzip the file you downloaded:
+📦 ai-study-buddy-chrome-extension.zip
+
+
+Open Chrome and go to:
+chrome://extensions
+
+
+Enable Developer Mode (top right)
+
+
+Click Load unpacked and select the unzipped folder
+
+
+
+🧠 3. Replace Origin Trial Tokens
+In popup.html, replace the placeholder tokens with your actual ones:
+HTML<meta http-equiv="origin-trial" content="YOUR_PROMPT_API_TOKEN"><meta http-equiv="origin-trial" content="YOUR_SUMMARIZER_API_TOKEN"><meta http-equiv="origin-trial" content="YOUR_PROOFREADER_API_TOKEN">Show more lines
+You can include both localhost and aistudybuddy.dev tokens if needed.
+
+🧪 4. Test the Features
+
+Click the extension icon in the Chrome toolbar
+Enter some text in the popup
+Click:
+
+Summarize → Uses the Summarizer API
+Proofread → Uses the Proofreader API
+Send Prompt → Uses the Prompt API
+
+
+View the AI-generated output in the <pre> area
+
+
+🧰 5. Debugging & Validation
+
+Open DevTools (Right-click → Inspect)
+Go to Application > Origin Trials to confirm tokens are active
+Check the Console for any errors or API responses
+
+
+Would you like help testing it on a live domain (aistudybuddy.dev) or setting up HTTPS locally for localhost:443?
